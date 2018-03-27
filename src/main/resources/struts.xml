@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+    <constant name="struts.devMode" value="true" />
+    <constant name="struts.objectFactory" value="spring" />
+
+    <package name="default" extends="struts-default">
+        <action name="" class="com.pej.web.struts.controller.UserAction" method="execute">
+            <result name="success">/WEB-INF/jsp/users.jsp</result>
+        </action>
+        <action name="users" class="com.pej.web.struts.controller.UserAction" method="execute">
+            <result name="success">/WEB-INF/jsp/users.jsp</result>
+        </action>
+        <action name="register" class="com.pej.web.struts.controller.UserAction" method="execute">
+            <result name="success">/WEB-INF/jsp/register.jsp</result>
+        </action>
+
+        <action name="registeruser" class="com.pej.web.struts.controller.RegisterAction">
+            <result name="REGISTER">/WEB-INF/jsp/register.jsp</result>
+        </action>
+        <action name="report" class="com.pej.web.struts.controller.StudentsAction">
+            <result name="STUDENTS">/WEB-INF/jsp/students.jsp</result>
+        </action>
+        <action name="updatedetails" class="com.pej.web.struts.controller.UpdateAction">
+            <result name="UPDATE">/WEB-INF/jsp/update.jsp</result>
+        </action>
+        <action name="deleterecord" class="com.pej.web.struts.controller.DeleteAction">
+            <result name="DELETE">/WEB-INF/jsp/delete.jsp</result>
+        </action>
+        <action name="students" class="com.pej.web.struts.controller.StudentsAction">
+            <result name="STUDENTS">/WEB-INF/jsp/students.jsp</result>
+        </action>
+
+
+
+    </package>
+</struts>
